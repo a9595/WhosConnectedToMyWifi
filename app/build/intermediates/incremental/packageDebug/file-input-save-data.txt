@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed May 10 19:19:23 CEST 2017
+#Wed May 10 19:23:20 CEST 2017
 5.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_
 42.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_
 32.set=JAVA_RESOURCE

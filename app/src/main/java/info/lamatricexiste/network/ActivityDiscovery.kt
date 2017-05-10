@@ -44,20 +44,17 @@ class ActivityDiscovery : ActivityNet() {
         setContentView(R.layout.discovery)
         initViews()
 
-//        initJobs()
+        //        initJobs()
     }
 
     private fun initJobs() {
         initDiscovering()
-        val button = findViewById(R.id.mainStartJob) as Button
-
-        //        button.setOnClickListener {
         JobManager.create(this@ActivityDiscovery).addJobCreator(ScanningJobCreator(this@ActivityDiscovery,
                                                                                    network_ip,
                                                                                    network_start,
-                                                                                   network_end))
+                                                                                   network_end,
+                                                                                   net.gatewayIp))
         ScanningJob.scheduleJob()
-        //        }
     }
 
     private fun initViews() {
@@ -104,10 +101,7 @@ class ActivityDiscovery : ActivityNet() {
             Log.e(TAG, e.message)
         }
 
-        when (method) {
-            1 -> mDiscoveryTask = DnsDiscovery(this@ActivityDiscovery)
-            else -> mDiscoveryTask = DefaultDiscovery(this@ActivityDiscovery)
-        }// Root
+        mDiscoveryTask = DefaultDiscovery(net.gatewayIp)
         mDiscoveryTask!!.setNetwork(network_ip, network_start, network_end)
     }
 

@@ -9,10 +9,11 @@ import java.util.concurrent.TimeUnit
 class ScanningJobCreator(private val activityDiscovery: ActivityDiscovery,
                          private val network_ip: Long,
                          private val network_start: Long,
-                         private val network_end: Long) : JobCreator {
+                         private val network_end: Long,
+                         private val gatewayIp: String) : JobCreator {
 
     override fun create(tag: String?): Job {
-        return ScanningJob(network_ip, network_start, network_end, activityDiscovery)
+        return ScanningJob(network_ip, network_start, network_end, activityDiscovery, gatewayIp)
     }
 
 }
@@ -20,7 +21,8 @@ class ScanningJobCreator(private val activityDiscovery: ActivityDiscovery,
 class ScanningJob(private val network_ip: Long,
                   private val network_start: Long,
                   private val network_end: Long,
-                  private val activityDiscovery: ActivityDiscovery) : Job() {
+                  private val activityDiscovery: ActivityDiscovery,
+                  private val gatewayIp: String) : Job() {
 
     override fun onRunJob(p0: Params?): Result {
         executeTask()
@@ -32,13 +34,13 @@ class ScanningJob(private val network_ip: Long,
     }
 
     private fun executeTask() {
-        val task = DefaultDiscovery(activityDiscovery)
+        val task = DefaultDiscovery(gatewayIp)
         task.setNetwork(network_ip, network_start, network_end)
 
         task.onDeviceAdded = { device ->
             Log.d("job", "$device")
         }
-        task.execute()
+        task.execute().get()
     }
 
     companion object {

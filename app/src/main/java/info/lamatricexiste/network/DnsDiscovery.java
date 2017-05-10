@@ -16,13 +16,14 @@ import java.net.InetAddress;
 import android.database.sqlite.SQLiteDatabaseCorruptException;
 import android.util.Log;
 
-public class DnsDiscovery extends AbstractDiscovery {
+public class DnsDiscovery /*extends AbstractDiscovery*/ {
 
     private final String TAG = "DnsDiscovery";
 
-    public DnsDiscovery(ActivityDiscovery discover) {
-        super(discover);
+    public DnsDiscovery() {
+        super();
     }
+/*
 
     @Override
     protected Void doInBackground(Void... params) {
@@ -72,5 +73,6 @@ public class DnsDiscovery extends AbstractDiscovery {
         }
         return null;
     }
+*/
 
 }
