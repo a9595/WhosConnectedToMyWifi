@@ -1,4 +1,4 @@
-#Wed May 10 19:23:20 CEST 2017
+#Wed May 10 22:41:44 CEST 2017
 base.0=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/transforms/dexMerger/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/transforms/dexMerger/debug/folders/1000/1f/main/classes.dex

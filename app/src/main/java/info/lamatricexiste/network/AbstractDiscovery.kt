@@ -3,7 +3,7 @@ package info.lamatricexiste.network
 import android.os.AsyncTask
 import info.lamatricexiste.network.Network.HostBean
 
-abstract class AbstractDiscovery() : AsyncTask<Void, HostBean, Void>() {
+abstract class AbstractDiscovery : AsyncTask<Void?, HostBean?, Void?>() {
 
     //private final String TAG = "AbstractDiscovery";
 
@@ -14,8 +14,8 @@ abstract class AbstractDiscovery() : AsyncTask<Void, HostBean, Void>() {
     protected var end: Long = 0
     protected var size: Long = 0
 
-    public var onDeviceAdded: (HostBean) -> Unit = {}
-    public var onFinished = {}
+    var onDeviceAdded: (HostBean?) -> Unit = {}
+    var onFinished = {}
 
     fun setNetwork(ip: Long, start: Long, end: Long) {
         this.ip = ip
@@ -23,24 +23,24 @@ abstract class AbstractDiscovery() : AsyncTask<Void, HostBean, Void>() {
         this.end = end
     }
 
-    abstract override fun doInBackground(vararg params: Void): Void
+    abstract override fun doInBackground(vararg params: Void?): Void
 
     override fun onPreExecute() {
         size = (end - start + 1).toInt().toLong()
     }
 
     override fun onProgressUpdate(vararg host: HostBean?) {
-        if (!isCancelled) {
-            host[0]?.let {
-                onDeviceAdded(it)
-            }
-            if (size > 0) {
-                //                discover.setProgress((hosts_done * 10000 / size).toInt())
-            }
+        if (isCancelled) return
+
+        host[0]?.let {
+            onDeviceAdded(it)
+        }
+        if (size > 0) {
+            val progress = (hosts_done * 10000 / size).toInt()
         }
     }
 
-    override fun onPostExecute(unused: Void) {
+    override fun onPostExecute(unused: Void?) {
         onFinished.invoke()
     }
 

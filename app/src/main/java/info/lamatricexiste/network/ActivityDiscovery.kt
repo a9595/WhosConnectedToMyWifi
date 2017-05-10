@@ -49,12 +49,11 @@ class ActivityDiscovery : ActivityNet() {
 
     private fun initJobs() {
         initDiscovering()
-        JobManager.create(this@ActivityDiscovery).addJobCreator(ScanningJobCreator(this@ActivityDiscovery,
-                                                                                   network_ip,
+        JobManager.create(this@ActivityDiscovery).addJobCreator(ScanningJobCreator(network_ip,
                                                                                    network_start,
                                                                                    network_end,
                                                                                    net.gatewayIp))
-        ScanningJob.scheduleJob()
+//        ScanningJob.scheduleJob()
     }
 
     private fun initViews() {
