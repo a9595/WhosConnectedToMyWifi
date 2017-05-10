@@ -1,50 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
  Copyright (C) 2009-2010 Aubort Jean-Baptiste (Rorist)
  Licensed under GNU's GPL 2, see README
  
  FIXME: Use RelativeLayout !!!
 -->
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/mainStartJob"
+        android:layout_height="wrap_content"
+        android:text="Start JOB" />
+
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dip">
+        android:layout_margin="5dip"
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/btn_discover"
+            style="@style/ButtonTop"
             android:drawableLeft="@drawable/discover"
-            android:text="@string/btn_discover"
-            style="@style/ButtonTop" />
+            android:text="@string/btn_discover" />
+
         <Button
             android:id="@+id/btn_options"
+            style="@style/ButtonTop"
             android:drawableLeft="@drawable/settings"
-            android:text="@string/btn_options"
-            style="@style/ButtonTop" />
+            android:text="@string/btn_options" />
     </LinearLayout>
+
     <FrameLayout
-        android:layout_width="fill_parent" 
+        android:layout_width="fill_parent"
         android:layout_height="0dip"
-        android:layout_weight="1" >
+        android:layout_weight="1">
+
         <ListView
             android:id="@+id/output"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:dividerHeight="0dip"
-            android:cacheColorHint="#00000000" />
+            android:cacheColorHint="#00000000"
+            android:dividerHeight="0dip" />
+
         <TextView
             android:id="@+id/list_empty"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:gravity="center_vertical"
             android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:text="@string/discover_empty"
             android:textSize="10dip"
-            android:typeface="monospace"
-            android:text="@string/discover_empty" /> <!--
+            android:typeface="monospace" /> <!--
         <SlidingDrawer
             android:id="@+id/drawer"
             android:layout_width="wrap_content"
@@ -91,29 +101,33 @@
          </SlidingDrawer>
           -->
     </FrameLayout>
+
     <LinearLayout
         android:id="@+id/info_container"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="10dip"
+        android:background="@drawable/drawer_bg"
+        android:orientation="vertical"
+        android:paddingBottom="5dip"
         android:paddingLeft="10dip"
         android:paddingRight="10dip"
-        android:paddingBottom="5dip"
-        android:background="@drawable/drawer_bg"
-        android:orientation="vertical">
+        android:paddingTop="10dip">
+
         <TextView
             android:id="@+id/info_ip"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textSize="10dip"
             android:typeface="monospace" />
+
         <TextView
             android:id="@+id/info_in"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:text="@string/wifi_unknown"
             android:textSize="10dip"
-            android:typeface="monospace"
-            android:text="@string/wifi_unknown" />
+            android:typeface="monospace" />
+
         <TextView
             android:id="@+id/info_mo"
             android:layout_width="fill_parent"

@@ -26,19 +26,19 @@ public class DnsDiscovery extends AbstractDiscovery {
 
     @Override
     protected Void doInBackground(Void... params) {
-        if (mDiscover != null) {
-            final ActivityDiscovery discover = mDiscover.get();
+        if (getMDiscover() != null) {
+            final ActivityDiscovery discover = getMDiscover().get();
             if (discover != null) {
-                Log.i(TAG, "start=" + NetInfo.getIpFromLongUnsigned(start) + " (" + start
-                        + "), end=" + NetInfo.getIpFromLongUnsigned(end) + " (" + end
-                        + "), length=" + size);
+                Log.i(TAG, "start=" + NetInfo.getIpFromLongUnsigned(getStart()) + " (" + getStart()
+                        + "), end=" + NetInfo.getIpFromLongUnsigned(getEnd()) + " (" + getEnd()
+                        + "), length=" + getSize());
 
                 int timeout = Integer.parseInt(discover.prefs.getString(Prefs.KEY_TIMEOUT_DISCOVER,
                         Prefs.DEFAULT_TIMEOUT_DISCOVER));
                 Log.i(TAG, "timeout=" + timeout + "ms");
 
-                for (long i = start; i < end + 1; i++) {
-                    hosts_done++;
+                for (long i = getStart(); i < getEnd() + 1; i++) {
+                    setHosts_done(getHosts_done() + 1);
                     HostBean host = new HostBean();
                     host.ipAddress = NetInfo.getIpFromLongUnsigned(i);
                     try {

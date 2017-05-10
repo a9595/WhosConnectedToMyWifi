@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed May 10 13:42:44 CEST 2017
+#Wed May 10 14:36:04 CEST 2017
 25.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/layout/main.xml
 41.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/transforms/mergeJavaRes/debug/folders/2/1f/main
 25.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_

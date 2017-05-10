@@ -10,9 +10,12 @@ import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.*
+import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuItem
+import android.view.Window
 import android.widget.*
-import android.widget.AdapterView.OnItemClickListener
+import com.evernote.android.job.JobManager
 import info.lamatricexiste.network.Network.HostBean
 import info.lamatricexiste.network.Network.NetInfo
 import info.lamatricexiste.network.Utils.Export
@@ -20,7 +23,7 @@ import info.lamatricexiste.network.Utils.Help
 import info.lamatricexiste.network.Utils.Prefs
 import java.util.*
 
-class ActivityDiscovery : ActivityNet(){
+class ActivityDiscovery : ActivityNet() {
 
     private val TAG = "ActivityDiscovery"
     private var currentNetwork = 0
@@ -39,6 +42,21 @@ class ActivityDiscovery : ActivityNet(){
         requestWindowFeature(Window.FEATURE_PROGRESS)
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS)
         setContentView(R.layout.discovery)
+        initViews()
+
+        initJobs()
+    }
+
+    private fun initJobs() {
+        initDiscovering()
+        val button = findViewById(R.id.mainStartJob) as Button
+
+        //        button.setOnClickListener {
+        JobManager.create(this@ActivityDiscovery).addJobCreator(ScanningJobCreator(mDiscoveryTask!!))
+        //        }
+    }
+
+    private fun initViews() {
         mInflater = LayoutInflater.from(ctxt)
 
         // Discover
@@ -55,26 +73,60 @@ class ActivityDiscovery : ActivityNet(){
         list.adapter = adapter
         list.itemsCanFocus = false
         list.emptyView = findViewById(R.id.list_empty)
+        initList()
+    }
 
-        // Drawer
-        /*
-         * final View info = findViewById(R.id.info_container); mDrawer =
-         * (SlidingDrawer) findViewById(R.id.drawer);
-         * mDrawer.setOnDrawerScrollListener(new
-         * SlidingDrawer.OnDrawerScrollListener() { public void
-         * onScrollStarted() {
-         * info.setBackgroundResource(R.drawable.drawer_bg2); }
-         *
-         * public void onScrollEnded() { } });
-         * mDrawer.setOnDrawerCloseListener(new
-         * SlidingDrawer.OnDrawerCloseListener() { public void onDrawerClosed()
-         * { info.setBackgroundResource(R.drawable.drawer_bg); } }); EditText
-         * cidr_value = (EditText) findViewById(R.id.cidr_value); ((Button)
-         * findViewById(R.id.btn_cidr_plus)).setOnClickListener(new
-         * View.OnClickListener() { public void onClick(View v) { } });
-         * ((Button) findViewById(R.id.btn_cidr_minus)).setOnClickListener(new
-         * View.OnClickListener() { public void onClick(View v) { } });
-         */
+
+    /**
+     * Discover hosts
+     */
+    private fun startDiscovering() {
+        initDiscovering()
+        mDiscoveryTask!!.execute()
+        btn_discover!!.setText(R.string.btn_discover_cancel)
+        setButton(btn_discover, R.drawable.cancel, false)
+        btn_discover!!.setOnClickListener { cancelTasks() }
+        makeToast(R.string.discover_start)
+        setProgressBarVisibility(true)
+        setProgressBarIndeterminateVisibility(true)
+    }
+
+    private fun initDiscovering() {
+        var method = 0
+        try {
+            method = Integer.parseInt(prefs.getString(Prefs.KEY_METHOD_DISCOVER,
+                                                      Prefs.DEFAULT_METHOD_DISCOVER))
+        } catch (e: NumberFormatException) {
+            Log.e(TAG, e.message)
+        }
+
+        when (method) {
+            1 -> mDiscoveryTask = DnsDiscovery(this@ActivityDiscovery)
+            else -> mDiscoveryTask = DefaultDiscovery(this@ActivityDiscovery)
+        }// Root
+        mDiscoveryTask!!.setNetwork(network_ip, network_start, network_end)
+    }
+
+    fun stopDiscovering() {
+        Log.e(TAG, "stopDiscovering()")
+        mDiscoveryTask = null
+        setButtonOn(btn_discover, R.drawable.discover)
+        btn_discover!!.setOnClickListener { startDiscovering() }
+        setProgressBarVisibility(false)
+        setProgressBarIndeterminateVisibility(false)
+        btn_discover!!.setText(R.string.btn_discover)
+    }
+
+    private fun initList() {
+        // setSelectedHosts(false);
+        adapter!!.clear()
+        hosts = ArrayList<HostBean>()
+    }
+
+    fun addHost(host: HostBean) {
+        host.position = hosts!!.size
+        hosts?.add(host)
+        adapter?.add(null)
     }
 
     override fun onResume() {
@@ -96,7 +148,7 @@ class ActivityDiscovery : ActivityNet(){
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             ActivityDiscovery.MENU_SCAN_SINGLE -> {
-//                scanSingle(this, null)
+                //                scanSingle(this, null)
                 return true
             }
             ActivityDiscovery.MENU_OPTIONS -> {
@@ -207,55 +259,6 @@ class ActivityDiscovery : ActivityNet(){
         var logo: ImageView? = null
     }
 
-    /**
-     * Discover hosts
-     */
-    private fun startDiscovering() {
-        var method = 0
-        try {
-            method = Integer.parseInt(prefs.getString(Prefs.KEY_METHOD_DISCOVER,
-                                                      Prefs.DEFAULT_METHOD_DISCOVER))
-        } catch (e: NumberFormatException) {
-            Log.e(TAG, e.message)
-        }
-
-        when (method) {
-            1 -> mDiscoveryTask = DnsDiscovery(this@ActivityDiscovery)
-            else -> mDiscoveryTask = DefaultDiscovery(this@ActivityDiscovery)
-        }// Root
-        mDiscoveryTask!!.setNetwork(network_ip, network_start, network_end)
-        mDiscoveryTask!!.execute()
-        btn_discover!!.setText(R.string.btn_discover_cancel)
-        setButton(btn_discover, R.drawable.cancel, false)
-        btn_discover!!.setOnClickListener { cancelTasks() }
-        makeToast(R.string.discover_start)
-        setProgressBarVisibility(true)
-        setProgressBarIndeterminateVisibility(true)
-        initList()
-    }
-
-    fun stopDiscovering() {
-        Log.e(TAG, "stopDiscovering()")
-        mDiscoveryTask = null
-        setButtonOn(btn_discover, R.drawable.discover)
-        btn_discover!!.setOnClickListener { startDiscovering() }
-        setProgressBarVisibility(false)
-        setProgressBarIndeterminateVisibility(false)
-        btn_discover!!.setText(R.string.btn_discover)
-    }
-
-    private fun initList() {
-        // setSelectedHosts(false);
-        adapter!!.clear()
-        hosts = ArrayList<HostBean>()
-    }
-
-    fun addHost(host: HostBean) {
-        host.position = hosts!!.size
-        hosts!!.add(host)
-        adapter!!.add(null)
-    }
-
     private fun export() {
         val e = Export(ctxt, hosts)
         val file = e.fileName
@@ -329,3 +332,4 @@ class ActivityDiscovery : ActivityNet(){
         var mInflater: LayoutInflater? = null
     }
 }
+

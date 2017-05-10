@@ -50,8 +50,8 @@ public class DefaultDiscovery extends AbstractDiscovery {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        if (mDiscover != null) {
-            final ActivityDiscovery discover = mDiscover.get();
+        if (getMDiscover() != null) {
+            final ActivityDiscovery discover = getMDiscover().get();
             if (discover != null) {
                 doRateControl = discover.prefs.getBoolean(Prefs.KEY_RATECTRL_ENABLE,
                         Prefs.DEFAULT_RATECTRL_ENABLE);
@@ -61,28 +61,28 @@ public class DefaultDiscovery extends AbstractDiscovery {
 
     @Override
     protected Void doInBackground(Void... params) {
-        if (mDiscover != null) {
-            final ActivityDiscovery discover = mDiscover.get();
+        if (getMDiscover() != null) {
+            final ActivityDiscovery discover = getMDiscover().get();
             if (discover != null) {
-                Log.v(TAG, "start=" + NetInfo.getIpFromLongUnsigned(start) + " (" + start
-                        + "), end=" + NetInfo.getIpFromLongUnsigned(end) + " (" + end
-                        + "), length=" + size);
+                Log.v(TAG, "start=" + NetInfo.getIpFromLongUnsigned(getStart()) + " (" + getStart()
+                        + "), end=" + NetInfo.getIpFromLongUnsigned(getEnd()) + " (" + getEnd()
+                        + "), length=" + getSize());
                 mPool = Executors.newFixedThreadPool(THREADS);
-                if (ip <= end && ip >= start) {
+                if (getIp() <= getEnd() && getIp() >= getStart()) {
                     Log.i(TAG, "Back and forth scanning");
                     // gateway
-                    launch(start);
+                    launch(getStart());
 
                     // hosts
-                    long pt_backward = ip;
-                    long pt_forward = ip + 1;
-                    long size_hosts = size - 1;
+                    long pt_backward = getIp();
+                    long pt_forward = getIp() + 1;
+                    long size_hosts = getSize() - 1;
 
                     for (int i = 0; i < size_hosts; i++) {
                         // Set pointer if of limits
-                        if (pt_backward <= start) {
+                        if (pt_backward <= getStart()) {
                             pt_move = 2;
-                        } else if (pt_forward > end) {
+                        } else if (pt_forward > getEnd()) {
                             pt_move = 1;
                         }
                         // Move back and forth
@@ -98,7 +98,7 @@ public class DefaultDiscovery extends AbstractDiscovery {
                     }
                 } else {
                     Log.i(TAG, "Sequencial scanning");
-                    for (long i = start; i <= end; i++) {
+                    for (long i = getStart(); i <= getEnd(); i++) {
                         launch(i);
                     }
                 }
@@ -145,8 +145,8 @@ public class DefaultDiscovery extends AbstractDiscovery {
             return mRateControl.rate;
         }
 
-        if (mDiscover != null) {
-            final ActivityDiscovery discover = mDiscover.get();
+        if (getMDiscover() != null) {
+            final ActivityDiscovery discover = getMDiscover().get();
             if (discover != null) {
                 return Integer.parseInt(discover.prefs.getString(Prefs.KEY_TIMEOUT_DISCOVER,
                         Prefs.DEFAULT_TIMEOUT_DISCOVER));
@@ -174,7 +174,7 @@ public class DefaultDiscovery extends AbstractDiscovery {
             try {
                 InetAddress h = InetAddress.getByName(addr);
                 // Rate control check
-                if (doRateControl && mRateControl.indicator != null && hosts_done % mRateMult == 0) {
+                if (doRateControl && mRateControl.indicator != null && getHosts_done() % mRateMult == 0) {
                     mRateControl.adaptRate();
                 }
                 // Arp Check #1
@@ -245,14 +245,14 @@ public class DefaultDiscovery extends AbstractDiscovery {
     }
 
     private void publish(final HostBean host) {
-        hosts_done++;
+        setHosts_done(getHosts_done() + 1);
         if(host == null){
             publishProgress((HostBean) null);
             return; 
         }
 
-        if (mDiscover != null) {
-            final ActivityDiscovery discover = mDiscover.get();
+        if (getMDiscover() != null) {
+            final ActivityDiscovery discover = getMDiscover().get();
             if (discover != null) {
                 // Mac Addr not already detected
                 if(NetInfo.NOMAC.equals(host.hardwareAddress)){

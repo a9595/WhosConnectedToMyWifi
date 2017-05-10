@@ -111,8 +111,11 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="support-annotations-25.0.0" level="project" />
+    <orderEntry type="library" exported="" name="android-job-1.1.10" level="project" />
     <orderEntry type="library" exported="" name="kotlin-stdlib-1.1.2-3" level="project" />
     <orderEntry type="library" exported="" name="annotations-13.0" level="project" />
+    <orderEntry type="library" exported="" name="cat-1.0.5" level="project" />
     <orderEntry type="library" exported="" name="kotlin-stdlib-jre7-1.1.2-3" level="project" />
     <orderEntry type="library" exported="" name="org.apache.http.legacy-android-25" level="project" />
   </component>

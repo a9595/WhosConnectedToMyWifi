@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 25
@@ -7,8 +8,8 @@ android {
 
     defaultConfig {
         applicationId "info.lamatricexiste.network"
-        minSdkVersion 3
-        targetSdkVersion 8
+        minSdkVersion 19
+        targetSdkVersion 25
     }
 
     buildTypes {
@@ -24,6 +25,7 @@ android {
 dependencies {
     compile 'org.apache.httpcomponents:httpclient:4.5'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile 'com.evernote:android-job:1.1.10'
 }
 repositories {
     mavenCentral()
