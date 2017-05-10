@@ -6,19 +6,25 @@ import com.evernote.android.job.JobCreator
 import com.evernote.android.job.JobRequest
 import java.util.concurrent.TimeUnit
 
-class ScanningJobCreator(private val task: AbstractDiscovery) : JobCreator {
+class ScanningJobCreator(private val activityDiscovery: ActivityDiscovery,
+                         private val network_ip: Long,
+                         private val network_start: Long,
+                         private val network_end: Long) : JobCreator {
 
     override fun create(tag: String?): Job {
-        return ScanningJob(task)
+        return ScanningJob(network_ip, network_start, network_end, activityDiscovery)
     }
 
 }
 
-class ScanningJob(private val task: AbstractDiscovery) : Job() {
+class ScanningJob(private val network_ip: Long,
+                  private val network_start: Long,
+                  private val network_end: Long,
+                  private val activityDiscovery: ActivityDiscovery) : Job() {
 
     override fun onRunJob(p0: Params?): Result {
         executeTask()
-        return Result.RESCHEDULE
+        return Result.SUCCESS
     }
 
     override fun onReschedule(newJobId: Int) {
@@ -26,6 +32,9 @@ class ScanningJob(private val task: AbstractDiscovery) : Job() {
     }
 
     private fun executeTask() {
+        val task = DefaultDiscovery(activityDiscovery)
+        task.setNetwork(network_ip, network_start, network_end)
+
         task.onDeviceAdded = { device ->
             Log.d("job", "$device")
         }
@@ -37,7 +46,7 @@ class ScanningJob(private val task: AbstractDiscovery) : Job() {
 
         fun scheduleJob() {
             JobRequest.Builder(TAG)
-                    .setPeriodic(TimeUnit.SECONDS.toMillis(15), TimeUnit.SECONDS.toMillis(5))
+                    .setPeriodic(TimeUnit.MINUTES.toMillis(15))
                     .setPersisted(true)
                     .build()
                     .schedule()

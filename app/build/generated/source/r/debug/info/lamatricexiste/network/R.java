@@ -9,16 +9,88 @@ package info.lamatricexiste.network;
 
 public final class R {
     public static final class array {
-        public static final int method_discover_name=0x7f060000;
-        public static final int method_discover_value=0x7f060001;
+        public static final int method_discover_name=0x7f070000;
+        public static final int method_discover_value=0x7f070001;
     }
     public static final class attr {
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>standard</code></td><td>0</td><td></td></tr>
+<tr><td><code>wide</code></td><td>1</td><td></td></tr>
+<tr><td><code>icon_only</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int buttonSize=0x7f010003;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int circleCrop=0x7f010002;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>dark</code></td><td>0</td><td></td></tr>
+<tr><td><code>light</code></td><td>1</td><td></td></tr>
+<tr><td><code>auto</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int colorScheme=0x7f010004;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int imageAspectRatio=0x7f010001;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td></td></tr>
+<tr><td><code>adjust_width</code></td><td>1</td><td></td></tr>
+<tr><td><code>adjust_height</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int imageAspectRatioAdjust=0x7f010000;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+         */
+        public static final int scopeUris=0x7f010005;
     }
     public static final class color {
-        public static final int grey=0x7f080000;
-        public static final int orange1=0x7f080001;
-        public static final int orange2=0x7f080002;
-        public static final int orange3=0x7f080003;
+        public static final int common_google_signin_btn_text_dark=0x7f08000c;
+        public static final int common_google_signin_btn_text_dark_default=0x7f080000;
+        public static final int common_google_signin_btn_text_dark_disabled=0x7f080001;
+        public static final int common_google_signin_btn_text_dark_focused=0x7f080002;
+        public static final int common_google_signin_btn_text_dark_pressed=0x7f080003;
+        public static final int common_google_signin_btn_text_light=0x7f08000d;
+        public static final int common_google_signin_btn_text_light_default=0x7f080004;
+        public static final int common_google_signin_btn_text_light_disabled=0x7f080005;
+        public static final int common_google_signin_btn_text_light_focused=0x7f080006;
+        public static final int common_google_signin_btn_text_light_pressed=0x7f080007;
+        public static final int common_google_signin_btn_tint=0x7f08000e;
+        public static final int grey=0x7f080008;
+        public static final int orange1=0x7f080009;
+        public static final int orange2=0x7f08000a;
+        public static final int orange3=0x7f08000b;
     }
     public static final class drawable {
         public static final int arrow_right=0x7f020000;
@@ -27,44 +99,77 @@ public final class R {
         public static final int btn_donate=0x7f020003;
         public static final int cancel=0x7f020004;
         public static final int closed=0x7f020005;
-        public static final int computer=0x7f020006;
-        public static final int computer_down=0x7f020007;
-        public static final int connect=0x7f020008;
-        public static final int disabled=0x7f020009;
-        public static final int discover=0x7f02000a;
-        public static final int drawer_bg=0x7f02000b;
-        public static final int export=0x7f02000c;
-        public static final int icon=0x7f02000d;
-        public static final int install=0x7f02000e;
-        public static final int open=0x7f02000f;
-        public static final int router=0x7f020010;
-        public static final int settings=0x7f020011;
-        public static final int wifi=0x7f020012;
+        public static final int common_full_open_on_phone=0x7f020006;
+        public static final int common_google_signin_btn_icon_dark=0x7f020007;
+        public static final int common_google_signin_btn_icon_dark_focused=0x7f020008;
+        public static final int common_google_signin_btn_icon_dark_normal=0x7f020009;
+        public static final int common_google_signin_btn_icon_dark_normal_background=0x7f02000a;
+        public static final int common_google_signin_btn_icon_disabled=0x7f02000b;
+        public static final int common_google_signin_btn_icon_light=0x7f02000c;
+        public static final int common_google_signin_btn_icon_light_focused=0x7f02000d;
+        public static final int common_google_signin_btn_icon_light_normal=0x7f02000e;
+        public static final int common_google_signin_btn_icon_light_normal_background=0x7f02000f;
+        public static final int common_google_signin_btn_text_dark=0x7f020010;
+        public static final int common_google_signin_btn_text_dark_focused=0x7f020011;
+        public static final int common_google_signin_btn_text_dark_normal=0x7f020012;
+        public static final int common_google_signin_btn_text_dark_normal_background=0x7f020013;
+        public static final int common_google_signin_btn_text_disabled=0x7f020014;
+        public static final int common_google_signin_btn_text_light=0x7f020015;
+        public static final int common_google_signin_btn_text_light_focused=0x7f020016;
+        public static final int common_google_signin_btn_text_light_normal=0x7f020017;
+        public static final int common_google_signin_btn_text_light_normal_background=0x7f020018;
+        public static final int computer=0x7f020019;
+        public static final int computer_down=0x7f02001a;
+        public static final int connect=0x7f02001b;
+        public static final int disabled=0x7f02001c;
+        public static final int discover=0x7f02001d;
+        public static final int drawer_bg=0x7f02001e;
+        public static final int export=0x7f02001f;
+        public static final int googleg_disabled_color_18=0x7f020020;
+        public static final int googleg_standard_color_18=0x7f020021;
+        public static final int icon=0x7f020022;
+        public static final int install=0x7f020023;
+        public static final int open=0x7f020024;
+        public static final int router=0x7f020025;
+        public static final int settings=0x7f020026;
+        public static final int wifi=0x7f020027;
     }
     public static final class id {
-        public static final int banner=0x7f0a000f;
-        public static final int btn_back=0x7f0a0015;
-        public static final int btn_discover=0x7f0a0002;
-        public static final int btn_options=0x7f0a0003;
-        public static final int btn_scan=0x7f0a0014;
-        public static final int edittext=0x7f0a0000;
-        public static final int host=0x7f0a0011;
-        public static final int info_container=0x7f0a0006;
-        public static final int info_in=0x7f0a0008;
-        public static final int info_ip=0x7f0a0007;
-        public static final int info_mo=0x7f0a0009;
-        public static final int ip=0x7f0a0016;
-        public static final int list=0x7f0a000b;
-        public static final int list_closed=0x7f0a0013;
-        public static final int list_connect=0x7f0a0010;
-        public static final int list_empty=0x7f0a0005;
-        public static final int list_open=0x7f0a0012;
-        public static final int list_ports=0x7f0a000e;
-        public static final int logo=0x7f0a000a;
-        public static final int mac=0x7f0a000c;
-        public static final int mainStartJob=0x7f0a0001;
-        public static final int output=0x7f0a0004;
-        public static final int vendor=0x7f0a000d;
+        public static final int adjust_height=0x7f0b0000;
+        public static final int adjust_width=0x7f0b0001;
+        public static final int auto=0x7f0b0006;
+        public static final int banner=0x7f0b0018;
+        public static final int btn_back=0x7f0b001e;
+        public static final int btn_discover=0x7f0b000b;
+        public static final int btn_options=0x7f0b000c;
+        public static final int btn_scan=0x7f0b001d;
+        public static final int dark=0x7f0b0007;
+        public static final int edittext=0x7f0b0009;
+        public static final int host=0x7f0b001a;
+        public static final int icon_only=0x7f0b0003;
+        public static final int info_container=0x7f0b000f;
+        public static final int info_in=0x7f0b0011;
+        public static final int info_ip=0x7f0b0010;
+        public static final int info_mo=0x7f0b0012;
+        public static final int ip=0x7f0b001f;
+        public static final int light=0x7f0b0008;
+        public static final int list=0x7f0b0014;
+        public static final int list_closed=0x7f0b001c;
+        public static final int list_connect=0x7f0b0019;
+        public static final int list_empty=0x7f0b000e;
+        public static final int list_open=0x7f0b001b;
+        public static final int list_ports=0x7f0b0017;
+        public static final int logo=0x7f0b0013;
+        public static final int mac=0x7f0b0015;
+        public static final int mainStartJob=0x7f0b000a;
+        public static final int none=0x7f0b0002;
+        public static final int output=0x7f0b000d;
+        public static final int standard=0x7f0b0004;
+        public static final int vendor=0x7f0b0016;
+        public static final int wide=0x7f0b0005;
+    }
+    public static final class integer {
+        public static final int google_play_services_version=0x7f090000;
     }
     public static final class layout {
         public static final int dialog_edittext=0x7f030000;
@@ -82,154 +187,304 @@ public final class R {
         public static final int services=0x7f050001;
     }
     public static final class string {
-        public static final int app_loading=0x7f070000;
-        public static final int app_name=0x7f070001;
-        public static final int btn_back=0x7f070002;
-        public static final int btn_close=0x7f070003;
-        public static final int btn_discover=0x7f070004;
-        public static final int btn_discover_cancel=0x7f070005;
-        public static final int btn_export=0x7f070006;
-        public static final int btn_info=0x7f070007;
-        public static final int btn_no=0x7f070008;
-        public static final int btn_ok=0x7f070009;
-        public static final int btn_options=0x7f07000a;
-        public static final int btn_ports=0x7f07000b;
-        public static final int btn_remove=0x7f07000c;
-        public static final int btn_scan=0x7f07000d;
-        public static final int btn_yes=0x7f07000e;
-        public static final int discover_action_deleted=0x7f07000f;
-        public static final int discover_action_rename=0x7f070010;
-        public static final int discover_action_saved=0x7f070011;
-        public static final int discover_action_scan=0x7f070012;
-        public static final int discover_action_title=0x7f070013;
-        public static final int discover_canceled=0x7f070014;
-        public static final int discover_empty=0x7f070015;
-        public static final int discover_finished=0x7f070016;
-        public static final int discover_myphone_name=0x7f070017;
-        public static final int discover_proxy_msg=0x7f070018;
-        public static final int discover_proxy_title=0x7f070019;
-        public static final int discover_root_install=0x7f07001a;
-        public static final int discover_root_restart=0x7f07001b;
-        public static final int discover_root_title=0x7f07001c;
-        public static final int discover_start=0x7f07001d;
-        public static final int export_choose=0x7f07001e;
-        public static final int export_exists_msg=0x7f07001f;
-        public static final int export_exists_title=0x7f070020;
-        public static final int export_finished=0x7f070021;
-        public static final int export_save=0x7f070022;
-        public static final int help_discovery_content=0x7f070023;
-        public static final int help_discovery_title=0x7f070024;
-        public static final int help_links_content=0x7f070025;
-        public static final int help_links_title=0x7f070026;
-        public static final int help_portscan_content=0x7f070027;
-        public static final int help_portscan_title=0x7f070028;
-        public static final int info_mac=0x7f070029;
-        public static final int info_nic=0x7f07002a;
-        public static final int info_ports_closed=0x7f07002b;
-        public static final int info_ports_open=0x7f07002c;
-        public static final int info_time=0x7f07002d;
-        public static final int info_unknown=0x7f07002e;
-        public static final int net_carrier=0x7f07002f;
-        public static final int net_ip=0x7f070030;
-        public static final int net_mode=0x7f070031;
-        public static final int net_mode_eth=0x7f070032;
-        public static final int net_mode_mobile=0x7f070033;
-        public static final int net_mode_unknown=0x7f070034;
-        public static final int net_mode_wifi=0x7f070035;
-        public static final int net_ssid=0x7f070036;
-        public static final int package_missing=0x7f070037;
-        public static final int preferences_advanced=0x7f070038;
-        public static final int preferences_allow_mobile_summary=0x7f070039;
-        public static final int preferences_allow_mobile_title=0x7f07003a;
-        public static final int preferences_banner_summary=0x7f07003b;
-        public static final int preferences_banner_title=0x7f07003c;
-        public static final int preferences_cidr=0x7f07003d;
-        public static final int preferences_cidr_custom_summary=0x7f07003e;
-        public static final int preferences_cidr_custom_title=0x7f07003f;
-        public static final int preferences_credits=0x7f070040;
-        public static final int preferences_discover=0x7f070041;
-        public static final int preferences_discover_method_summary=0x7f070042;
-        public static final int preferences_discover_method_title=0x7f070043;
-        public static final int preferences_discover_method_title_dialog=0x7f070044;
-        public static final int preferences_donate=0x7f070045;
-        public static final int preferences_email_title=0x7f070046;
-        public static final int preferences_error1=0x7f070047;
-        public static final int preferences_error2=0x7f070048;
-        public static final int preferences_error3=0x7f070049;
-        public static final int preferences_error4=0x7f07004a;
-        public static final int preferences_export=0x7f07004b;
-        public static final int preferences_help=0x7f07004c;
-        public static final int preferences_intf_summary=0x7f07004d;
-        public static final int preferences_intf_title=0x7f07004e;
-        public static final int preferences_ip_custom_summary=0x7f07004f;
-        public static final int preferences_ip_custom_title=0x7f070050;
-        public static final int preferences_ip_end_summary=0x7f070051;
-        public static final int preferences_ip_end_title=0x7f070052;
-        public static final int preferences_ip_start_summary=0x7f070053;
-        public static final int preferences_ip_start_title=0x7f070054;
-        public static final int preferences_options=0x7f070055;
-        public static final int preferences_port_end_summary=0x7f070056;
-        public static final int preferences_port_end_title=0x7f070057;
-        public static final int preferences_port_start_summary=0x7f070058;
-        public static final int preferences_port_start_title=0x7f070059;
-        public static final int preferences_portscan=0x7f07005a;
-        public static final int preferences_ratecontrol_enable_summary=0x7f07005b;
-        public static final int preferences_ratecontrol_enable_title=0x7f07005c;
-        public static final int preferences_resetdb_action=0x7f07005d;
-        public static final int preferences_resetdb_ok=0x7f07005e;
-        public static final int preferences_resetdb_summary=0x7f07005f;
-        public static final int preferences_resetdb_title=0x7f070060;
-        public static final int preferences_resolve_name_summary=0x7f070061;
-        public static final int preferences_resolve_name_title=0x7f070062;
-        public static final int preferences_ssh_user_summary=0x7f070063;
-        public static final int preferences_ssh_user_title=0x7f070064;
-        public static final int preferences_threads_summary=0x7f070065;
-        public static final int preferences_threads_title=0x7f070066;
-        public static final int preferences_timeout_discover_summary=0x7f070067;
-        public static final int preferences_timeout_discover_title=0x7f070068;
-        public static final int preferences_timeout_force_summary=0x7f070069;
-        public static final int preferences_timeout_force_title=0x7f07006a;
-        public static final int preferences_timeout_summary=0x7f07006b;
-        public static final int preferences_timeout_title=0x7f07006c;
-        public static final int preferences_version_title=0x7f07006d;
-        public static final int preferences_vibrate_summary=0x7f07006e;
-        public static final int preferences_vibrate_title=0x7f07006f;
-        public static final int preferences_website_title=0x7f070070;
-        public static final int scan_banner_title=0x7f070071;
-        public static final int scan_canceled=0x7f070072;
-        public static final int scan_closed=0x7f070073;
-        public static final int scan_connect=0x7f070074;
-        public static final int scan_finished=0x7f070075;
-        public static final int scan_host_unreachable=0x7f070076;
-        public static final int scan_noaction=0x7f070077;
-        public static final int scan_noport=0x7f070078;
-        public static final int scan_open=0x7f070079;
-        public static final int scan_single_summary=0x7f07007a;
-        public static final int scan_single_title=0x7f07007b;
-        public static final int scan_start=0x7f07007c;
-        public static final int task_db=0x7f07007d;
-        public static final int task_services=0x7f07007e;
-        public static final int wifi_associating=0x7f07007f;
-        public static final int wifi_dhcp=0x7f070080;
-        public static final int wifi_disabled=0x7f070081;
-        public static final int wifi_disabling=0x7f070082;
-        public static final int wifi_enabled=0x7f070083;
-        public static final int wifi_enabling=0x7f070084;
-        public static final int wifi_scanning=0x7f070085;
-        public static final int wifi_unknown=0x7f070086;
+        public static final int app_loading=0x7f060011;
+        public static final int app_name=0x7f060012;
+        public static final int btn_back=0x7f060013;
+        public static final int btn_close=0x7f060014;
+        public static final int btn_discover=0x7f060015;
+        public static final int btn_discover_cancel=0x7f060016;
+        public static final int btn_export=0x7f060017;
+        public static final int btn_info=0x7f060018;
+        public static final int btn_no=0x7f060019;
+        public static final int btn_ok=0x7f06001a;
+        public static final int btn_options=0x7f06001b;
+        public static final int btn_ports=0x7f06001c;
+        public static final int btn_remove=0x7f06001d;
+        public static final int btn_scan=0x7f06001e;
+        public static final int btn_yes=0x7f06001f;
+        public static final int common_google_play_services_enable_button=0x7f060000;
+        public static final int common_google_play_services_enable_text=0x7f060001;
+        public static final int common_google_play_services_enable_title=0x7f060002;
+        public static final int common_google_play_services_install_button=0x7f060003;
+        public static final int common_google_play_services_install_text=0x7f060004;
+        public static final int common_google_play_services_install_title=0x7f060005;
+        public static final int common_google_play_services_notification_ticker=0x7f060006;
+        public static final int common_google_play_services_unknown_issue=0x7f060007;
+        public static final int common_google_play_services_unsupported_text=0x7f060008;
+        public static final int common_google_play_services_update_button=0x7f060009;
+        public static final int common_google_play_services_update_text=0x7f06000a;
+        public static final int common_google_play_services_update_title=0x7f06000b;
+        public static final int common_google_play_services_updating_text=0x7f06000c;
+        public static final int common_google_play_services_wear_update_text=0x7f06000d;
+        public static final int common_open_on_phone=0x7f06000e;
+        public static final int common_signin_button_text=0x7f06000f;
+        public static final int common_signin_button_text_long=0x7f060010;
+        public static final int discover_action_deleted=0x7f060020;
+        public static final int discover_action_rename=0x7f060021;
+        public static final int discover_action_saved=0x7f060022;
+        public static final int discover_action_scan=0x7f060023;
+        public static final int discover_action_title=0x7f060024;
+        public static final int discover_canceled=0x7f060025;
+        public static final int discover_empty=0x7f060026;
+        public static final int discover_finished=0x7f060027;
+        public static final int discover_myphone_name=0x7f060028;
+        public static final int discover_proxy_msg=0x7f060029;
+        public static final int discover_proxy_title=0x7f06002a;
+        public static final int discover_root_install=0x7f06002b;
+        public static final int discover_root_restart=0x7f06002c;
+        public static final int discover_root_title=0x7f06002d;
+        public static final int discover_start=0x7f06002e;
+        public static final int export_choose=0x7f06002f;
+        public static final int export_exists_msg=0x7f060030;
+        public static final int export_exists_title=0x7f060031;
+        public static final int export_finished=0x7f060032;
+        public static final int export_save=0x7f060033;
+        public static final int help_discovery_content=0x7f060034;
+        public static final int help_discovery_title=0x7f060035;
+        public static final int help_links_content=0x7f060036;
+        public static final int help_links_title=0x7f060037;
+        public static final int help_portscan_content=0x7f060038;
+        public static final int help_portscan_title=0x7f060039;
+        public static final int info_mac=0x7f06003a;
+        public static final int info_nic=0x7f06003b;
+        public static final int info_ports_closed=0x7f06003c;
+        public static final int info_ports_open=0x7f06003d;
+        public static final int info_time=0x7f06003e;
+        public static final int info_unknown=0x7f06003f;
+        public static final int net_carrier=0x7f060040;
+        public static final int net_ip=0x7f060041;
+        public static final int net_mode=0x7f060042;
+        public static final int net_mode_eth=0x7f060043;
+        public static final int net_mode_mobile=0x7f060044;
+        public static final int net_mode_unknown=0x7f060045;
+        public static final int net_mode_wifi=0x7f060046;
+        public static final int net_ssid=0x7f060047;
+        public static final int package_missing=0x7f060048;
+        public static final int preferences_advanced=0x7f060049;
+        public static final int preferences_allow_mobile_summary=0x7f06004a;
+        public static final int preferences_allow_mobile_title=0x7f06004b;
+        public static final int preferences_banner_summary=0x7f06004c;
+        public static final int preferences_banner_title=0x7f06004d;
+        public static final int preferences_cidr=0x7f06004e;
+        public static final int preferences_cidr_custom_summary=0x7f06004f;
+        public static final int preferences_cidr_custom_title=0x7f060050;
+        public static final int preferences_credits=0x7f060051;
+        public static final int preferences_discover=0x7f060052;
+        public static final int preferences_discover_method_summary=0x7f060053;
+        public static final int preferences_discover_method_title=0x7f060054;
+        public static final int preferences_discover_method_title_dialog=0x7f060055;
+        public static final int preferences_donate=0x7f060056;
+        public static final int preferences_email_title=0x7f060057;
+        public static final int preferences_error1=0x7f060058;
+        public static final int preferences_error2=0x7f060059;
+        public static final int preferences_error3=0x7f06005a;
+        public static final int preferences_error4=0x7f06005b;
+        public static final int preferences_export=0x7f06005c;
+        public static final int preferences_help=0x7f06005d;
+        public static final int preferences_intf_summary=0x7f06005e;
+        public static final int preferences_intf_title=0x7f06005f;
+        public static final int preferences_ip_custom_summary=0x7f060060;
+        public static final int preferences_ip_custom_title=0x7f060061;
+        public static final int preferences_ip_end_summary=0x7f060062;
+        public static final int preferences_ip_end_title=0x7f060063;
+        public static final int preferences_ip_start_summary=0x7f060064;
+        public static final int preferences_ip_start_title=0x7f060065;
+        public static final int preferences_options=0x7f060066;
+        public static final int preferences_port_end_summary=0x7f060067;
+        public static final int preferences_port_end_title=0x7f060068;
+        public static final int preferences_port_start_summary=0x7f060069;
+        public static final int preferences_port_start_title=0x7f06006a;
+        public static final int preferences_portscan=0x7f06006b;
+        public static final int preferences_ratecontrol_enable_summary=0x7f06006c;
+        public static final int preferences_ratecontrol_enable_title=0x7f06006d;
+        public static final int preferences_resetdb_action=0x7f06006e;
+        public static final int preferences_resetdb_ok=0x7f06006f;
+        public static final int preferences_resetdb_summary=0x7f060070;
+        public static final int preferences_resetdb_title=0x7f060071;
+        public static final int preferences_resolve_name_summary=0x7f060072;
+        public static final int preferences_resolve_name_title=0x7f060073;
+        public static final int preferences_ssh_user_summary=0x7f060074;
+        public static final int preferences_ssh_user_title=0x7f060075;
+        public static final int preferences_threads_summary=0x7f060076;
+        public static final int preferences_threads_title=0x7f060077;
+        public static final int preferences_timeout_discover_summary=0x7f060078;
+        public static final int preferences_timeout_discover_title=0x7f060079;
+        public static final int preferences_timeout_force_summary=0x7f06007a;
+        public static final int preferences_timeout_force_title=0x7f06007b;
+        public static final int preferences_timeout_summary=0x7f06007c;
+        public static final int preferences_timeout_title=0x7f06007d;
+        public static final int preferences_version_title=0x7f06007e;
+        public static final int preferences_vibrate_summary=0x7f06007f;
+        public static final int preferences_vibrate_title=0x7f060080;
+        public static final int preferences_website_title=0x7f060081;
+        public static final int scan_banner_title=0x7f060082;
+        public static final int scan_canceled=0x7f060083;
+        public static final int scan_closed=0x7f060084;
+        public static final int scan_connect=0x7f060085;
+        public static final int scan_finished=0x7f060086;
+        public static final int scan_host_unreachable=0x7f060087;
+        public static final int scan_noaction=0x7f060088;
+        public static final int scan_noport=0x7f060089;
+        public static final int scan_open=0x7f06008a;
+        public static final int scan_single_summary=0x7f06008b;
+        public static final int scan_single_title=0x7f06008c;
+        public static final int scan_start=0x7f06008d;
+        public static final int task_db=0x7f06008e;
+        public static final int task_services=0x7f06008f;
+        public static final int wifi_associating=0x7f060090;
+        public static final int wifi_dhcp=0x7f060091;
+        public static final int wifi_disabled=0x7f060092;
+        public static final int wifi_disabling=0x7f060093;
+        public static final int wifi_enabled=0x7f060094;
+        public static final int wifi_enabling=0x7f060095;
+        public static final int wifi_scanning=0x7f060096;
+        public static final int wifi_unknown=0x7f060097;
     }
     public static final class style {
-        public static final int Button=0x7f090000;
-        public static final int ButtonBottom=0x7f090001;
-        public static final int ButtonConnect=0x7f090002;
-        public static final int ButtonTop=0x7f090003;
-        public static final int ListText=0x7f090004;
-        public static final int ListTextSummary=0x7f090005;
-        public static final int ListTextTitle=0x7f090006;
-        public static final int help_content=0x7f090007;
-        public static final int help_title=0x7f090008;
+        public static final int Button=0x7f0a0000;
+        public static final int ButtonBottom=0x7f0a0001;
+        public static final int ButtonConnect=0x7f0a0002;
+        public static final int ButtonTop=0x7f0a0003;
+        public static final int ListText=0x7f0a0004;
+        public static final int ListTextSummary=0x7f0a0005;
+        public static final int ListTextTitle=0x7f0a0006;
+        public static final int help_content=0x7f0a0007;
+        public static final int help_title=0x7f0a0008;
     }
     public static final class xml {
         public static final int preferences=0x7f040000;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a LoadingImageView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #LoadingImageView_circleCrop info.lamatricexiste.network:circleCrop}</code></td><td></td></tr>
+           <tr><td><code>{@link #LoadingImageView_imageAspectRatio info.lamatricexiste.network:imageAspectRatio}</code></td><td></td></tr>
+           <tr><td><code>{@link #LoadingImageView_imageAspectRatioAdjust info.lamatricexiste.network:imageAspectRatioAdjust}</code></td><td></td></tr>
+           </table>
+           @see #LoadingImageView_circleCrop
+           @see #LoadingImageView_imageAspectRatio
+           @see #LoadingImageView_imageAspectRatioAdjust
+         */
+        public static final int[] LoadingImageView = {
+            0x7f010000, 0x7f010001, 0x7f010002
+        };
+        /**
+          <p>This symbol is the offset where the {@link info.lamatricexiste.network.R.attr#circleCrop}
+          attribute's value can be found in the {@link #LoadingImageView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.lamatricexiste.network:circleCrop
+        */
+        public static final int LoadingImageView_circleCrop = 2;
+        /**
+          <p>This symbol is the offset where the {@link info.lamatricexiste.network.R.attr#imageAspectRatio}
+          attribute's value can be found in the {@link #LoadingImageView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name info.lamatricexiste.network:imageAspectRatio
+        */
+        public static final int LoadingImageView_imageAspectRatio = 1;
+        /**
+          <p>This symbol is the offset where the {@link info.lamatricexiste.network.R.attr#imageAspectRatioAdjust}
+          attribute's value can be found in the {@link #LoadingImageView} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>none</code></td><td>0</td><td></td></tr>
+<tr><td><code>adjust_width</code></td><td>1</td><td></td></tr>
+<tr><td><code>adjust_height</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name info.lamatricexiste.network:imageAspectRatioAdjust
+        */
+        public static final int LoadingImageView_imageAspectRatioAdjust = 0;
+        /** Attributes that can be used with a SignInButton.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SignInButton_buttonSize info.lamatricexiste.network:buttonSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #SignInButton_colorScheme info.lamatricexiste.network:colorScheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #SignInButton_scopeUris info.lamatricexiste.network:scopeUris}</code></td><td></td></tr>
+           </table>
+           @see #SignInButton_buttonSize
+           @see #SignInButton_colorScheme
+           @see #SignInButton_scopeUris
+         */
+        public static final int[] SignInButton = {
+            0x7f010003, 0x7f010004, 0x7f010005
+        };
+        /**
+          <p>This symbol is the offset where the {@link info.lamatricexiste.network.R.attr#buttonSize}
+          attribute's value can be found in the {@link #SignInButton} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>standard</code></td><td>0</td><td></td></tr>
+<tr><td><code>wide</code></td><td>1</td><td></td></tr>
+<tr><td><code>icon_only</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name info.lamatricexiste.network:buttonSize
+        */
+        public static final int SignInButton_buttonSize = 0;
+        /**
+          <p>This symbol is the offset where the {@link info.lamatricexiste.network.R.attr#colorScheme}
+          attribute's value can be found in the {@link #SignInButton} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>dark</code></td><td>0</td><td></td></tr>
+<tr><td><code>light</code></td><td>1</td><td></td></tr>
+<tr><td><code>auto</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name info.lamatricexiste.network:colorScheme
+        */
+        public static final int SignInButton_colorScheme = 1;
+        /**
+          <p>This symbol is the offset where the {@link info.lamatricexiste.network.R.attr#scopeUris}
+          attribute's value can be found in the {@link #SignInButton} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+          @attr name info.lamatricexiste.network:scopeUris
+        */
+        public static final int SignInButton_scopeUris = 2;
+    };
 }

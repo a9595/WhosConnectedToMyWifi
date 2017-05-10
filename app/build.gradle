@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "info.lamatricexiste.network"
         minSdkVersion 19
-        targetSdkVersion 25
+        targetSdkVersion 19
     }
 
     buildTypes {
@@ -24,8 +24,9 @@ android {
 
 dependencies {
     compile 'org.apache.httpcomponents:httpclient:4.5'
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
     compile 'com.evernote:android-job:1.1.10'
+    compile 'com.google.android.gms:play-services-gcm:10.2.4'
 }
 repositories {
     mavenCentral()

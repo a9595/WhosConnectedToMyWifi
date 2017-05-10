@@ -112,11 +112,18 @@
     <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="support-annotations-25.0.0" level="project" />
-    <orderEntry type="library" exported="" name="android-job-1.1.10" level="project" />
-    <orderEntry type="library" exported="" name="kotlin-stdlib-1.1.2-3" level="project" />
+    <orderEntry type="library" exported="" name="kotlin-stdlib-jre8-1.1.2-3" level="project" />
+    <orderEntry type="library" exported="" name="play-services-iid-10.2.4" level="project" />
     <orderEntry type="library" exported="" name="annotations-13.0" level="project" />
+    <orderEntry type="library" exported="" name="play-services-base-10.2.4" level="project" />
+    <orderEntry type="library" exported="" name="play-services-tasks-10.2.4" level="project" />
+    <orderEntry type="library" exported="" name="play-services-basement-10.2.4" level="project" />
+    <orderEntry type="library" exported="" name="support-v4-24.0.0" level="project" />
     <orderEntry type="library" exported="" name="cat-1.0.5" level="project" />
     <orderEntry type="library" exported="" name="kotlin-stdlib-jre7-1.1.2-3" level="project" />
+    <orderEntry type="library" exported="" name="play-services-gcm-10.2.4" level="project" />
+    <orderEntry type="library" exported="" name="android-job-1.1.10" level="project" />
+    <orderEntry type="library" exported="" name="kotlin-stdlib-1.1.2-3" level="project" />
     <orderEntry type="library" exported="" name="org.apache.http.legacy-android-25" level="project" />
   </component>
 </module>

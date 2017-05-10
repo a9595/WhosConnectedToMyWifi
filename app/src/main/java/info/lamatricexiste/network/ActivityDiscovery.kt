@@ -44,7 +44,7 @@ class ActivityDiscovery : ActivityNet() {
         setContentView(R.layout.discovery)
         initViews()
 
-        initJobs()
+//        initJobs()
     }
 
     private fun initJobs() {
@@ -52,7 +52,11 @@ class ActivityDiscovery : ActivityNet() {
         val button = findViewById(R.id.mainStartJob) as Button
 
         //        button.setOnClickListener {
-        JobManager.create(this@ActivityDiscovery).addJobCreator(ScanningJobCreator(mDiscoveryTask!!))
+        JobManager.create(this@ActivityDiscovery).addJobCreator(ScanningJobCreator(this@ActivityDiscovery,
+                                                                                   network_ip,
+                                                                                   network_start,
+                                                                                   network_end))
+        ScanningJob.scheduleJob()
         //        }
     }
 
@@ -218,6 +222,8 @@ class ActivityDiscovery : ActivityNet() {
             edit.putString(Prefs.KEY_IP_END, NetInfo.getIpFromLongUnsigned(network_end))
             edit.commit()
         }
+
+        initJobs()
     }
 
     override fun setButtons(disable: Boolean) {
