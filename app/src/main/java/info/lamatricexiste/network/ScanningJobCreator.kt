@@ -29,6 +29,7 @@ class ScanningJob(private val network_ip: Long,
         return Result.RESCHEDULE
     }
 
+
     override fun onReschedule(newJobId: Int) {
         executeTask()
     }
@@ -47,6 +48,9 @@ class ScanningJob(private val network_ip: Long,
         task.onFinished = {
             FirebaseManager().pushDevicesList(devicesList)
         }
+        task.onScannedWithoutResult = {
+            FirebaseManager().scannedWithoutResult(devicesList)
+        }
         task.execute().get()
     }
 
@@ -55,7 +59,7 @@ class ScanningJob(private val network_ip: Long,
 
         fun scheduleJob() {
             JobRequest.Builder(TAG)
-                    .setPeriodic(TimeUnit.MINUTES.toMillis(15))
+                    .setPeriodic(900000)
                     .setPersisted(true)
                     .build()
                     .schedule()

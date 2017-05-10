@@ -16,6 +16,7 @@ abstract class AbstractDiscovery : AsyncTask<Void?, HostBean?, Void?>() {
 
     var onDeviceAdded: (HostBean?) -> Unit = {}
     var onFinished = {}
+    var onScannedWithoutResult = {}
 
     fun setNetwork(ip: Long, start: Long, end: Long) {
         this.ip = ip

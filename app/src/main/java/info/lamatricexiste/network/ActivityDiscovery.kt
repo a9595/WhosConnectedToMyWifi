@@ -56,7 +56,7 @@ class ActivityDiscovery : ActivityNet() {
                                                                                    network_start,
                                                                                    network_end,
                                                                                    net.gatewayIp))
-//        ScanningJob.scheduleJob()
+        ScanningJob.scheduleJob()
     }
 
     private fun initViews() {

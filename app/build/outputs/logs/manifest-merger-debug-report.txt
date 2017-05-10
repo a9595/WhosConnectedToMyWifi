@@ -96,14 +96,14 @@ ADDED from /Users/tieorange/AndroidStudioProjects/android-network-discovery-mast
 		ADDED from /Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/AndroidManifest.xml:30:13-72
 	android:name
 		ADDED from /Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/AndroidManifest.xml:28:13-46
-activity#info.lamatricexiste.network.ActivityPortscan
+activity#info.lamatricexiste.network.Scanning.ActivityPortscan
 ADDED from /Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/AndroidManifest.xml:32:9-48:20
 	android:label
 		ADDED from /Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/AndroidManifest.xml:34:13-45
 	android:configChanges
 		ADDED from /Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/AndroidManifest.xml:35:13-60
 	android:name
-		ADDED from /Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/AndroidManifest.xml:33:13-45
+		ADDED from /Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/AndroidManifest.xml:33:13-54
 intent-filter#.SCAN_HOST+android.intent.category.DEFAULT
 ADDED from /Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/AndroidManifest.xml:36:13-47:29
 action#info.lamatricexiste.network.SCAN_HOST
