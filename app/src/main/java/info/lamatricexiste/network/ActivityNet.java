@@ -1,22 +1,21 @@
 package info.lamatricexiste.network;
 
-import info.lamatricexiste.network.Network.NetInfo;
-import info.lamatricexiste.network.Utils.Prefs;
-
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.wifi.SupplicantState;
-import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.content.SharedPreferences;
 import android.util.Log;
+
+import info.lamatricexiste.network.Network.NetInfo;
+import info.lamatricexiste.network.Utils.Prefs;
 
 public abstract class ActivityNet extends Activity {
 
@@ -34,7 +33,7 @@ public abstract class ActivityNet extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ctxt = getApplicationContext();
+        ctxt = this;
         prefs = PreferenceManager.getDefaultSharedPreferences(ctxt);
         connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         net = new NetInfo(ctxt);
@@ -100,7 +99,7 @@ public abstract class ActivityNet extends Activity {
                         info_in_str = getString(R.string.wifi_scanning);
                     } else if (sstate == SupplicantState.ASSOCIATING) {
                         info_in_str = getString(R.string.wifi_associating,
-                                (net.ssid != null ? net.ssid : (net.bssid != null ? net.bssid
+                                (net.ssid != null ? net.ssid: (net.bssid != null ? net.bssid
                                         : net.macAddress)));
                     } else if (sstate == SupplicantState.COMPLETED) {
                         info_in_str = getString(R.string.wifi_dhcp, net.ssid);
@@ -123,7 +122,7 @@ public abstract class ActivityNet extends Activity {
                             info_ip_str = getString(R.string.net_ip, net.ip, net.cidr, net.intf);
                             info_in_str = getString(R.string.net_ssid, net.ssid);
                             info_mo_str = getString(R.string.net_mode, getString(
-                                    R.string.net_mode_wifi, net.speed, WifiInfo.LINK_SPEED_UNITS));
+                                    R.string.net_mode_wifi));
                             setButtons(false);
                         }
                     } else if (type == ConnectivityManager.TYPE_MOBILE) { // 3G

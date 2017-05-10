@@ -70,7 +70,7 @@ public abstract class AbstractDiscovery extends AsyncTask<Void, HostBean, Void> 
                 if (discover.prefs.getBoolean(Prefs.KEY_VIBRATE_FINISH,
                         Prefs.DEFAULT_VIBRATE_FINISH) == true) {
                     Vibrator v = (Vibrator) discover.getSystemService(Context.VIBRATOR_SERVICE);
-                    v.vibrate(ActivityDiscovery.VIBRATE);
+                    v.vibrate(ActivityDiscovery.Companion.getVIBRATE());
                 }
                 discover.makeToast(R.string.discover_finished);
                 discover.stopDiscovering();

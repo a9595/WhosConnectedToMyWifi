@@ -161,10 +161,10 @@ final public class ActivityPortscan extends TabActivity {
         // Tabs
         TabHost tabHost = getTabHost();
         tabHost.addTab(tabHost.newTabSpec("tab_open").setIndicator(
-                getString(R.string.scan_open, cnt_open),
+                getString(R.string.scan_open),
                 getResources().getDrawable(R.drawable.open)).setContent(R.id.list_open));
         tabHost.addTab(tabHost.newTabSpec("tab_closed").setIndicator(
-                getString(R.string.scan_closed, cnt_closed),
+                getString(R.string.scan_closed),
                 getResources().getDrawable(R.drawable.closed)).setContent(R.id.list_closed));
         tabHost.setCurrentTab(0);
         // Ugly hack to have the view holding the tabs
@@ -220,11 +220,11 @@ final public class ActivityPortscan extends TabActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        menu.add(0, ActivityDiscovery.MENU_SCAN_SINGLE, 0, R.string.scan_single_title).setIcon(
+        menu.add(0, ActivityDiscovery.Companion.getMENU_SCAN_SINGLE(), 0, R.string.scan_single_title).setIcon(
                 android.R.drawable.ic_menu_mylocation);
-        menu.add(0, ActivityDiscovery.MENU_OPTIONS, 0, R.string.btn_options).setIcon(
+        menu.add(0, ActivityDiscovery.Companion.getMENU_OPTIONS(), 0, R.string.btn_options).setIcon(
                 android.R.drawable.ic_menu_preferences);
-        menu.add(0, ActivityDiscovery.MENU_HELP, 0, R.string.preferences_help).setIcon(
+        menu.add(0, ActivityDiscovery.Companion.getMENU_HELP(), 0, R.string.preferences_help).setIcon(
                 android.R.drawable.ic_menu_help);
         return true;
     }
@@ -232,15 +232,15 @@ final public class ActivityPortscan extends TabActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case ActivityDiscovery.MENU_SCAN_SINGLE:
-                ActivityDiscovery.scanSingle(this, host.ipAddress);
+            /*case ActivityDiscovery.Companion.getMENU_SCAN_SINGLE():
+                ActivityDiscovery.Companion.scanSingle(this, host.ipAddress);
                 return true;
-            case ActivityDiscovery.MENU_OPTIONS:
+            case ActivityDiscovery.Companion.getMENU_OPTIONS():
                 startActivity(new Intent(ctxt, Prefs.class));
                 return true;
-            case ActivityDiscovery.MENU_HELP:
+            case ActivityDiscovery.Companion.getMENU_HELP():
                 startActivity(new Intent(ctxt, Help.class));
-                return true;
+                return true;*/
         }
         return false;
     }
@@ -308,7 +308,7 @@ final public class ActivityPortscan extends TabActivity {
                     public void onClick(View v) {
                         final AlertDialog.Builder dialog = new AlertDialog.Builder(
                                 ActivityPortscan.this);
-                        dialog.setTitle(getString(R.string.scan_banner_title, port));
+                        dialog.setTitle(getString(R.string.scan_banner_title));
                         dialog.setMessage(holder.banner.getText());
                         dialog.setNegativeButton(R.string.btn_close, null);
                         dialog.show();
@@ -421,7 +421,7 @@ final public class ActivityPortscan extends TabActivity {
             host.portsOpen = new ArrayList<Integer>();
             host.portsClosed = new ArrayList<Integer>();
             mTabOpen.setText(getString(R.string.scan_open, 0));
-            mTabClosed.setText(getString(R.string.scan_closed, 0));
+            mTabClosed.setText(getString(R.string.scan_closed));
             setProgress(0);
         }
 
@@ -479,7 +479,7 @@ final public class ActivityPortscan extends TabActivity {
             // Finishing
             if (prefs.getBoolean(Prefs.KEY_VIBRATE_FINISH, Prefs.DEFAULT_VIBRATE_FINISH) == true) {
                 Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                v.vibrate(ActivityDiscovery.VIBRATE);
+                v.vibrate(ActivityDiscovery.Companion.getVIBRATE());
             }
             if (host.portsOpen.size() == 0) {
                 makeToast(R.string.scan_noport);
