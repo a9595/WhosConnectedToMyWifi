@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "488355591611",
+    "firebase_url": "https://polymerlearn-e3144.firebaseio.com",
+    "project_id": "polymerlearn-e3144",
+    "storage_bucket": "polymerlearn-e3144.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488355591611:android:dd11537adaf4c2be",
+        "android_client_info": {
+          "package_name": "info.lamatricexiste.network"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488355591611-f2a6ogq3p58m5nemp9nk3c2n202umgpg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3EyOaa1mVYeneKPOWMlL76qFDwv_Qgjk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

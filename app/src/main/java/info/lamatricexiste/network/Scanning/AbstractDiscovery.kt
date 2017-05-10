@@ -1,4 +1,4 @@
-package info.lamatricexiste.network
+package info.lamatricexiste.network.Scanning
 
 import android.os.AsyncTask
 import info.lamatricexiste.network.Network.HostBean

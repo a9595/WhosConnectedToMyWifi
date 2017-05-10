@@ -4,6 +4,8 @@ import android.util.Log
 import com.evernote.android.job.Job
 import com.evernote.android.job.JobCreator
 import com.evernote.android.job.JobRequest
+import info.lamatricexiste.network.Network.HostBean
+import info.lamatricexiste.network.Scanning.DefaultDiscovery
 import java.util.concurrent.TimeUnit
 
 class ScanningJobCreator(private val network_ip: Long,
@@ -31,12 +33,19 @@ class ScanningJob(private val network_ip: Long,
         executeTask()
     }
 
+    private val devicesList = ArrayList<HostBean?>()
+
     private fun executeTask() {
         val task = DefaultDiscovery(gatewayIp)
         task.setNetwork(network_ip, network_start, network_end)
 
         task.onDeviceAdded = { device ->
-            Log.d("job", "$device")
+            FirebaseManager().pushDevicesList(devicesList)
+            devicesList.add(device)
+            Log.d("DEVICEEEEEE: ", "$device")
+        }
+        task.onFinished = {
+            FirebaseManager().pushDevicesList(devicesList)
         }
         task.execute().get()
     }
@@ -54,3 +63,4 @@ class ScanningJob(private val network_ip: Long,
     }
 
 }
+

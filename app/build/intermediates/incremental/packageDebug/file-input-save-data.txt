@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed May 10 22:41:44 CEST 2017
+#Wed May 10 22:59:29 CEST 2017
 5.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_
 42.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_
 32.set=JAVA_RESOURCE
@@ -18,7 +18,7 @@
 61.set=ANDROID_RESOURCE
 32.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/transforms/mergeJavaRes/debug/folders/2/1f/main
 65.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/transforms/mergeJavaRes/debug/folders/2/1f/main/META-INF/kotlin-stdlib-jre7.kotlin_module
-17.set=JAVA_RESOURCE
+17.set=ANDROID_RESOURCE
 50.set=ANDROID_RESOURCE
 68.set=ANDROID_RESOURCE
 4.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/drawable/computer_down.png
@@ -38,7 +38,7 @@
 55.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/raw/saves.bin
 35.set=ANDROID_RESOURCE
 21.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/transforms/mergeJavaRes/debug/folders/2/1f/main/kotlin/internal/internal.kotlin_builtins
-16.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_
+16.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/transforms/mergeJavaRes/debug/folders/2/1f/main
 49.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/transforms/mergeJavaRes/debug/folders/2/1f/main/kotlin/ranges/ranges.kotlin_builtins
 31.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/drawable/discover.png
 59.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/drawable/computer.png
@@ -73,14 +73,14 @@
 71.set=ANDROID_RESOURCE
 33.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_
 66.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/icon.png
-17.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/transforms/mergeJavaRes/debug/folders/2/1f/main
+17.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_
 27.set=ANDROID_RESOURCE
 60.set=ANDROID_RESOURCE
 count=72
 5.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/resources.arsc
 27.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_
 42.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_light_normal_background.9.png
-16.set=ANDROID_RESOURCE
+16.set=JAVA_RESOURCE
 37.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_
 67.set=JAVA_RESOURCE
 52.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/drawable/common_google_signin_btn_text_light_normal.xml
@@ -112,7 +112,7 @@ count=72
 19.set=ANDROID_RESOURCE
 44.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_
 52.set=ANDROID_RESOURCE
-16.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/raw/services.bin
+16.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/transforms/mergeJavaRes/debug/folders/2/1f/main/jsr305_annotations/Jsr305_annotations.gwt.xml
 54.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_
 3.set=ANDROID_RESOURCE
 20.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/transforms/mergeJavaRes/debug/folders/2/1f/main
@@ -148,7 +148,7 @@ count=72
 33.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/drawable/common_google_signin_btn_text_dark_focused.xml
 71.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_
 6.set=ANDROID_RESOURCE
-17.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/transforms/mergeJavaRes/debug/folders/2/1f/main/jsr305_annotations/Jsr305_annotations.gwt.xml
+17.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/raw/services.bin
 0.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/transforms/mergeJavaRes/debug/folders/2/1f/main
 44.set=ANDROID_RESOURCE
 27.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/drawable/wifi.png
@@ -201,7 +201,7 @@ count=72
 20.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/transforms/mergeJavaRes/debug/folders/2/1f/main/META-INF/kotlin-stdlib-jre8.kotlin_module
 15.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_
 48.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/drawable/common_google_signin_btn_icon_light_normal.xml
-30.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/drawable/common_google_signin_btn_text_dark_normal.xml
+30.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/drawable/closed.png
 58.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/drawable/router.png
 14.set=ANDROID_RESOURCE
 65.set=JAVA_RESOURCE
@@ -211,7 +211,7 @@ count=72
 18.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/layout/portscan.xml
 1.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_
 54.set=ANDROID_RESOURCE
-28.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/drawable/closed.png
+28.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/drawable/common_google_signin_btn_text_dark_normal.xml
 66.base=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_
 10.file=/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png
 5.set=ANDROID_RESOURCE

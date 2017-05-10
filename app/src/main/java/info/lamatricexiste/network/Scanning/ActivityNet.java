@@ -1,4 +1,4 @@
-package info.lamatricexiste.network;
+package info.lamatricexiste.network.Scanning;
 
 import android.app.Activity;
 import android.content.BroadcastReceiver;
@@ -15,6 +15,7 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 
 import info.lamatricexiste.network.Network.NetInfo;
+import info.lamatricexiste.network.R;
 import info.lamatricexiste.network.Utils.Prefs;
 
 public abstract class ActivityNet extends Activity {

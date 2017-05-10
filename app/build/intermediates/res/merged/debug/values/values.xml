@@ -76,6 +76,7 @@
     <string name="common_open_on_phone">Open on phone</string>
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="default_web_client_id" translatable="false">488355591611-f2a6ogq3p58m5nemp9nk3c2n202umgpg.apps.googleusercontent.com</string>
     <string name="discover_action_deleted">Name deleted!</string>
     <string name="discover_action_rename">Change name</string>
     <string name="discover_action_saved">Name saved!</string>
@@ -96,6 +97,12 @@
     <string name="export_exists_title">File already exists</string>
     <string name="export_finished">File saved !</string>
     <string name="export_save">Save</string>
+    <string name="firebase_database_url" translatable="false">https://polymerlearn-e3144.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">488355591611</string>
+    <string name="google_api_key" translatable="false">AIzaSyD3EyOaa1mVYeneKPOWMlL76qFDwv_Qgjk</string>
+    <string name="google_app_id" translatable="false">1:488355591611:android:dd11537adaf4c2be</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD3EyOaa1mVYeneKPOWMlL76qFDwv_Qgjk</string>
+    <string name="google_storage_bucket" translatable="false">polymerlearn-e3144.appspot.com</string>
     <string name="help_discovery_content">The method that is being used, does not need to have root privileges. In future release there will be more advanced techniques, once the non-root ones are polished.\n\nHere is how it works: \n1. Calculate the subnetwork range\n2. Iterate throught IP and query them\n3. First it sends an ICMP ping or Echo on tcp/7 (with InetAddress.isReachable())\n4. If it does not work, it tries to connect() on well known open tcp ports such as: 135, 139, 22, 111, 80\n5. If none of the above is successful, the host is not discovered</string>
     <string name="help_discovery_title">Hosts discovery</string>
     <string name="help_links_content">- TCP connect scan: http://nmap.org/book/man-port-scanning-techniques.html#id421401\n\n- Host discovery: http://nmap.org/book/man-host-discovery.html</string>

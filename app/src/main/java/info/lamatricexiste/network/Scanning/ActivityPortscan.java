@@ -3,12 +3,13 @@
  * Licensed under GNU's GPL 2, see README
  */
 
-package info.lamatricexiste.network;
+package info.lamatricexiste.network.Scanning;
 
+import info.lamatricexiste.network.ActivityDiscovery;
 import info.lamatricexiste.network.Network.HostBean;
 import info.lamatricexiste.network.Network.NetInfo;
+import info.lamatricexiste.network.R;
 import info.lamatricexiste.network.Utils.Db;
-import info.lamatricexiste.network.Utils.Help;
 import info.lamatricexiste.network.Utils.Prefs;
 
 import java.lang.ref.WeakReference;

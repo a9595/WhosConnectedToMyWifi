@@ -18,6 +18,9 @@ import android.widget.*
 import com.evernote.android.job.JobManager
 import info.lamatricexiste.network.Network.HostBean
 import info.lamatricexiste.network.Network.NetInfo
+import info.lamatricexiste.network.Scanning.AbstractDiscovery
+import info.lamatricexiste.network.Scanning.ActivityNet
+import info.lamatricexiste.network.Scanning.DefaultDiscovery
 import info.lamatricexiste.network.Utils.Export
 import info.lamatricexiste.network.Utils.Help
 import info.lamatricexiste.network.Utils.Prefs

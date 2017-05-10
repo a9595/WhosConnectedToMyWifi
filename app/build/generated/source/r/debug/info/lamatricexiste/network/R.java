@@ -219,6 +219,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int common_open_on_phone=0x7f06000e;
         public static final int common_signin_button_text=0x7f06000f;
         public static final int common_signin_button_text_long=0x7f060010;
+        public static final int default_web_client_id=0x7f060098;
         public static final int discover_action_deleted=0x7f060020;
         public static final int discover_action_rename=0x7f060021;
         public static final int discover_action_saved=0x7f060022;
@@ -239,6 +240,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int export_exists_title=0x7f060031;
         public static final int export_finished=0x7f060032;
         public static final int export_save=0x7f060033;
+        public static final int firebase_database_url=0x7f060099;
+        public static final int gcm_defaultSenderId=0x7f06009a;
+        public static final int google_api_key=0x7f06009b;
+        public static final int google_app_id=0x7f06009c;
+        public static final int google_crash_reporting_api_key=0x7f06009d;
+        public static final int google_storage_bucket=0x7f06009e;
         public static final int help_discovery_content=0x7f060034;
         public static final int help_discovery_title=0x7f060035;
         public static final int help_links_content=0x7f060036;

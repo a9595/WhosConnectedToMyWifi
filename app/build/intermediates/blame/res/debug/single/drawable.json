@@ -12,12 +12,12 @@
         "source": "/Users/tieorange/.android/build-cache/7fc8054300c0db3fd4d07b817787a86fabdb09c1/output/res/drawable/common_google_signin_btn_text_dark_focused.xml"
     },
     {
-        "merged": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/merged/debug/drawable/install.png",
-        "source": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/res/drawable/install.png"
-    },
-    {
         "merged": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_disabled.xml",
         "source": "/Users/tieorange/.android/build-cache/7fc8054300c0db3fd4d07b817787a86fabdb09c1/output/res/drawable/common_google_signin_btn_icon_disabled.xml"
+    },
+    {
+        "merged": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/merged/debug/drawable/install.png",
+        "source": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/res/drawable/install.png"
     },
     {
         "merged": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light.xml",
