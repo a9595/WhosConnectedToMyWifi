@@ -2,5 +2,9 @@
     {
         "merged": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/merged/debug/drawable-mdpi/icon.png",
         "source": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/res/drawable-mdpi/icon.png"
+    },
+    {
+        "merged": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/build/intermediates/res/merged/debug/drawable-mdpi/icon.png",
+        "source": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/src/main/res/drawable-mdpi/icon.png"
     }
 ]

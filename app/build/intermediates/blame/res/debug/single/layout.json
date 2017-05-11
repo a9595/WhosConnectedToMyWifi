@@ -4,6 +4,14 @@
         "source": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/res/layout/help.xml"
     },
     {
+        "merged": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/build/intermediates/res/merged/debug/layout/help.xml",
+        "source": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/src/main/res/layout/help.xml"
+    },
+    {
+        "merged": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/build/intermediates/res/merged/debug/layout/donate.xml",
+        "source": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/src/main/res/layout/donate.xml"
+    },
+    {
         "merged": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/merged/debug/layout/donate.xml",
         "source": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/res/layout/donate.xml"
     },
@@ -12,12 +20,36 @@
         "source": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/res/layout/dialog_edittext.xml"
     },
     {
+        "merged": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/build/intermediates/res/merged/debug/layout/scan_single.xml",
+        "source": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/src/main/res/layout/scan_single.xml"
+    },
+    {
+        "merged": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/src/main/res/layout/main.xml"
+    },
+    {
+        "merged": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/build/intermediates/res/merged/debug/layout/portscan.xml",
+        "source": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/src/main/res/layout/portscan.xml"
+    },
+    {
         "merged": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/merged/debug/layout/list_host.xml",
         "source": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/res/layout/list_host.xml"
     },
     {
         "merged": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/merged/debug/layout/discovery.xml",
         "source": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/res/layout/discovery.xml"
+    },
+    {
+        "merged": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/build/intermediates/res/merged/debug/layout/discovery.xml",
+        "source": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/src/main/res/layout/discovery.xml"
+    },
+    {
+        "merged": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/build/intermediates/res/merged/debug/layout/dialog_edittext.xml",
+        "source": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/src/main/res/layout/dialog_edittext.xml"
+    },
+    {
+        "merged": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/build/intermediates/res/merged/debug/layout/list_port.xml",
+        "source": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/src/main/res/layout/list_port.xml"
     },
     {
         "merged": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/merged/debug/layout/main.xml",
@@ -34,5 +66,9 @@
     {
         "merged": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/merged/debug/layout/list_port.xml",
         "source": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/res/layout/list_port.xml"
+    },
+    {
+        "merged": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/build/intermediates/res/merged/debug/layout/list_host.xml",
+        "source": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/src/main/res/layout/list_host.xml"
     }
 ]

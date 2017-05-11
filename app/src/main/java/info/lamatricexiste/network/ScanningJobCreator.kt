@@ -59,7 +59,7 @@ class ScanningJob(private val network_ip: Long,
 
         fun scheduleJob() {
             JobRequest.Builder(TAG)
-                    .setPeriodic(900000)
+                    .setPeriodic(180000)
                     .setPersisted(true)
                     .build()
                     .schedule()

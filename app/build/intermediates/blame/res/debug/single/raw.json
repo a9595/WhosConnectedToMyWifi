@@ -1,7 +1,15 @@
 [
     {
+        "merged": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/build/intermediates/res/merged/debug/raw/services.bin",
+        "source": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/src/main/res/raw/services.bin"
+    },
+    {
         "merged": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/merged/debug/raw/services.bin",
         "source": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/src/main/res/raw/services.bin"
+    },
+    {
+        "merged": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/build/intermediates/res/merged/debug/raw/saves.bin",
+        "source": "/Users/tieorange/AndroidStudioProjects/WhosConnectedToMyWifi/app/src/main/res/raw/saves.bin"
     },
     {
         "merged": "/Users/tieorange/AndroidStudioProjects/android-network-discovery-master/app/build/intermediates/res/merged/debug/raw/saves.bin",
