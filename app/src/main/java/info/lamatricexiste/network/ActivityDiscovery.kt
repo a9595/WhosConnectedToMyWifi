@@ -56,6 +56,8 @@ class ActivityDiscovery : ActivityNet() {
                                                                                    network_start,
                                                                                    network_end,
                                                                                    net.gatewayIp))
+        JobManager.instance().config.isAllowSmallerIntervalsForMarshmallow = true
+
         ScanningJob.scheduleJob()
     }
 

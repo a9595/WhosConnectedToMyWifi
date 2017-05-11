@@ -6,7 +6,6 @@ import com.evernote.android.job.JobCreator
 import com.evernote.android.job.JobRequest
 import info.lamatricexiste.network.Network.HostBean
 import info.lamatricexiste.network.Scanning.DefaultDiscovery
-import java.util.concurrent.TimeUnit
 
 class ScanningJobCreator(private val network_ip: Long,
                          private val network_start: Long,
@@ -59,8 +58,9 @@ class ScanningJob(private val network_ip: Long,
 
         fun scheduleJob() {
             JobRequest.Builder(TAG)
-                    .setPeriodic(180000)
+                    .setPeriodic(60000)
                     .setPersisted(true)
+                    .setRequiresCharging(false)
                     .build()
                     .schedule()
         }

@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "info.lamatricexiste.network"
         minSdkVersion 19
-        targetSdkVersion 19
+        targetSdkVersion 25
     }
 
     buildTypes {
